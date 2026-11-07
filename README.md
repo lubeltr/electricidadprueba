@@ -1,30 +1,24 @@
-# Casa Noma
+# Muebles Germán
 
-Catálogo estático de una mueblería ficticia, en español rioplatense. HTML, CSS y JavaScript vanilla; sin frameworks, instalación ni dependencias npm.
+Landing-catálogo de Muebles Germán, Córdoba Capital. Una sola página con imágenes, estilos y JavaScript incorporados; sin base de datos ni dependencias npm.
 
-## Abrir
+## Abrir o publicar
 
-Descargá el repositorio y abrí `index.html` en un navegador. El HTML contiene los estilos, el script y las imágenes incorporadas: se puede compartir ese archivo por separado. Google Fonts es opcional; sin conexión se usan fuentes de respaldo.
-
-Incluye catálogo con búsqueda y filtros, tres productos especiales, carrusel automático, detalle desplegable con cantidad para consultar, modo oscuro y una sección interactiva de materiales, medidas y entrega.
+Abrí `index.html` en un navegador. Para GitHub Pages, seleccioná la rama `main` y la carpeta raíz. No necesita compilación ni servidor de aplicación.
 
 ## Editar
 
-- `script.js`: objeto `CONFIG` con negocio, productos, precios y teléfono de WhatsApp; también contiene las interacciones.
-- `styles.css`: diseño y estilos responsive.
-- `assets/`: imágenes originales generadas y versiones WebP optimizadas.
-- `index.html`: estructura y versión autónoma, con una instantánea estática para conservar el catálogo visible sin JavaScript.
+- `script.js`: CONFIG con datos del negocio, catálogo y comportamiento.
+- `styles.css`: paleta rojo, marfil y carbón; diseño responsive y temas.
+- `assets/`: imágenes WebP de origen.
+- `index.html`: versión autónoma con las imágenes incorporadas.
 
-Después de editar CSS, JavaScript o las imágenes WebP, ejecutá:
+Después de editar los archivos separados, ejecutá `python3 sync_site.py` para actualizar el HTML. Python solo se utiliza durante la edición.
 
-```sh
-python3 sync_site.py
-```
+## Contacto
 
-Este comando actualiza las copias incrustadas sin dependencias adicionales. Los cambios en `CONFIG` se aplican al abrir el sitio con JavaScript activado; la instantánea estática existente se conserva como respaldo.
+La Rioja 38, Córdoba Capital. Teléfono: 0351 15-241-0823. WhatsApp: +54 9 351 241-0823. Lunes a viernes 10:00–17:30; sábados 10:00–14:00; domingos cerrado. Enlace a Google Maps incluido.
 
-## Datos de ejemplo
+## Contenido ilustrativo
 
-Los productos, precios, teléfonos y datos del negocio son ficticios. Las imágenes fueron generadas para este prototipo. Reemplazá `CONFIG.business.whatsapp` por el número real (solo dígitos con código de país) antes de usarlo comercialmente.
-
-El sitio es un catálogo: no procesa compras, pagos ni reservas. Las consultas se continúan por WhatsApp.
+Los nueve productos, fotografías y precios del catálogo son ejemplos; no representan inventario, precios ni disponibilidad confirmados del comercio. No hay pagos, carrito ni reservas. Las consultas se continúan por WhatsApp.

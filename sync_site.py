@@ -16,7 +16,7 @@ if scripts != 1:
 html, styles = re.subn(r'<style>.*?</style>', '__NOMA_STYLES__', html, flags=re.S)
 if styles != 1:
     raise SystemExit('Expected exactly one stylesheet; HTML left unchanged.')
-for classes, filename in [('(?:hero-image|studio-image)', 'living-noma.webp'), ('product-photo', 'productos-noma.webp')]:
+for classes, filename in [('(?:hero-image|studio-image)', 'living-german.webp'), ('product-photo', 'productos-german.webp')]:
     image = 'data:image/webp;base64,' + base64.b64encode((ROOT / 'assets' / filename).read_bytes()).decode('ascii')
     pattern = r'(<img\b[^>]*\bclass="' + classes + r'"[^>]*\bsrc=")[^"]+("[^>]*>)'
     html = re.sub(pattern, lambda match: match[1] + image + match[2], html)
